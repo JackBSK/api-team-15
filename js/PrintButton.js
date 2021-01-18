@@ -5,7 +5,7 @@ export default class PrintButton {
   }
   
   addSubmitButton (submitButton){
-    const button = `<input id="envio" type="submit" value="Submit" class="btn btn-warning btn-lg"/>`
+    const button = `<button id="envio" type="submit" data-toggle="model" class="btn btn-warning btn-lg"/>submit</button>`
     submitButton.container.innerHTML += button
   }
 
@@ -50,6 +50,7 @@ export default class PrintButton {
                       </div>
                   </div>
                       `
+                      
       this.container.innerHTML += results
       this.resetForm()
       this.addDefaultAction(arrayCorrectAnswers, tryAndId)

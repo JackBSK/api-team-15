@@ -5,11 +5,11 @@ export default class NotFoundQuestion {
   }
 
   printMessageNotFoundQuestion(){
-      this.container.innerHTML = `<div class="card">
-                                  <div class="card-body">
-                                      "No se encontraron preguntas con las características mencionadas"
-                                  </div>
-                              </div>
+      this.container.innerHTML = `<div class="alert alert-dismissible alert-primary">
+      <h4 class="alert-heading">Question not found</h4>
+      <p class="mb-0">Aun no contamos con preguntas suficientes para esta categoria, por favor intente otra.</p>
+      <p class="mb-0">Agregue sus propias preguntas <a href="https://opentdb.com/login.php">AQUI</a></p>
+    </div>
       `  
   }
 
