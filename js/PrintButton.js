@@ -5,7 +5,7 @@ export default class PrintButton {
   }
   
   addSubmitButton (submitButton){
-    const button = `<input id="envio" type="submit" value="Submit" />`
+    const button = `<input id="envio" type="submit" value="Submit" class="btn btn-warning btn-lg"/>`
     submitButton.container.innerHTML += button
   }
 
