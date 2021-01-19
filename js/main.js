@@ -2,8 +2,8 @@ import Question from './Question.js'
 import PrintQuestion from './PrintQuestion.js'
 import NotFoundQuestion from './NotFoundQuestion.js'
 
-[...document.getElementsByClassName('form-control')].forEach(selected => {
-    selected.addEventListener('change', () => getQuestions())
+[...document.getElementsByClassName('btn')].forEach(selected => {
+    selected.addEventListener('click', () => getQuestions())
 })
 
 function getCategory() {

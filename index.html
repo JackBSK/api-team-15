@@ -4,41 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Open Trivia</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+
     <!--completar el codigo-->
     <h1 class="bg-primary text-center">Open trivia</h1>
-    <div class="card m-3">
-        <div class="card-body">
-            <h5 class="card-title text-center">Elige tus preguntas</h2>
-                <div class="form-group">
-                    <label for="questions-number">Numero de preguntas</label>
-                    <input type="number" class="form-control" id="questions-number" value="5" min="5" max="50">
-                    <label for="questions-category">Categoria de preguntas</label>
-                    <select class="form-control" id="questions-category">
-                    <option value="any">Any Category</option>
-                </select>
-                    <label for="questions-difficulty">Dificultad</label>
-                    <select class="form-control" id="questions-difficulty">
-                    <option value="any">Any Difficulty</option>
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-                    <label for="questions-type">Tipo</label>
-                    <select class="form-control" id="questions-type">
-                    <option value="any">Any Type</option>
-                    <option value="multiple">Multiple</option>
-                    <option value="boolean">True / False</option>
-                </select>
-                </div>
+    <div class="d-flex">
+        <div class="card col-md-8 col-lg-8 mr-1">
+            <div class="card-body">
+                <h5 class="card-title text-center">Elige tus preguntas</h2>
+                    <div class="form-group">
+                        <form action="/question" onsubmit="event.preventDefault()">
+                            <label for="questions-number">Numero de preguntas</label>
+                            <input type="number" class="form-control" id="questions-number" value="5" min="5" max="50">
+                            <label for="questions-category">Categoria de preguntas</label>
+                            <select class="form-control" id="questions-category">
+                        <option value="any">Any Category</option>
+                        </select>
+                            <label for="questions-difficulty">Dificultad</label>
+                            <select class="form-control" id="questions-difficulty">
+                            <option value="any">Any Difficulty</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                            <label for="questions-type">Tipo</label>
+                            <select class="form-control" id="questions-type">
+                            <option value="any">Any Type</option>
+                            <option value="multiple">Multiple</option>
+                            <option value="boolean">True / False</option>
+                        </select>
+                            <button type="submit" class="btn btn-primary mt-3">Get Questions</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+        <div class="card col-md-4 col-lg-4 ">
+            <div class="text-center">
+                <h5 class="mt-2">Numero de intentos</h5>
+            </div>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+                <div id="resultados" class="align-items-start"></div>
+            </div>
         </div>
     </div>
-    <form class="container mt-5"></form>
+    <form class="container mt-2 flex-xl-column text-align align-items-center justify-content-center" class="col-md-12 col-lg-12 col-sm-12"></form>
     <script type="module" src="./js/main.js"></script>
+
 </body>
 
 </html>

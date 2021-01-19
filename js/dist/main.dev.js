@@ -16,8 +16,8 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-_toConsumableArray(document.getElementsByClassName('form-control')).forEach(function (selected) {
-  selected.addEventListener('change', function () {
+_toConsumableArray(document.getElementsByClassName('btn')).forEach(function (selected) {
+  selected.addEventListener('click', function () {
     return getQuestions();
   });
 });
