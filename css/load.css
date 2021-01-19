@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Rammetto+One);
-
 * {
     box-sizing: border-box;
 }
@@ -18,32 +17,22 @@ section {
     align-self: center;
     direction: rtl;
 }
+
 h1 {
     font-family: 'Rammetto One', cursive;
     margin: 3rem auto -2rem;
     font-size: 4rem;
     letter-spacing: -2px;
     color: #f9ed69;
-    text-shadow: 0 0 0 #f08a5d,
-                 1px 1px 0 #f08a5d, 
-                 -2px -2px 0 #f08a5d, 
-                 -3px -3px 0 #f08a5d, 
-                 -4px -4px 0 #f08a5d, 
-                 -5px -5px 0 #b83b5e, 
-                 -6px -6px 0 #b83b5e, 
-                 -7px -7px 0 #b83b5e, 
-                 -8px -8px 0 #6a2c70, 
-                 -9px -9px 0 #6a2c70, 
-                 -10px -10px 0 #6a2c70, 
-                 -11px -11px 0 #6a2c70,  
-                 10px -10px 0 rgba(255, 255, 255, 0.08), 
-                 0 8px 8px rgba(255, 255, 255, 0.15);
+    text-shadow: 0 0 0 #f08a5d, 1px 1px 0 #f08a5d, -2px -2px 0 #f08a5d, -3px -3px 0 #f08a5d, -4px -4px 0 #f08a5d, -5px -5px 0 #b83b5e, -6px -6px 0 #b83b5e, -7px -7px 0 #b83b5e, -8px -8px 0 #6a2c70, -9px -9px 0 #6a2c70, -10px -10px 0 #6a2c70, -11px -11px 0 #6a2c70, 10px -10px 0 rgba(255, 255, 255, 0.08), 0 8px 8px rgba(255, 255, 255, 0.15);
 }
+
 .c1 {
     display: inline-block;
     position: relative;
     height: 3.125em;
 }
+
 .c1:before {
     content: "";
     display: block;
@@ -57,6 +46,7 @@ h1 {
     transform: scale(0.5);
     animation: shadow 1s linear infinite 0s;
 }
+
 .c1:after {
     content: "";
     display: block;
@@ -76,6 +66,7 @@ h1 {
     position: relative;
     height: 2.500em;
 }
+
 .c2:before {
     content: "";
     display: block;
@@ -89,6 +80,7 @@ h1 {
     transform: scale(0.5);
     animation: shadow 1s linear infinite 0.2s;
 }
+
 .c2:after {
     content: "";
     display: block;
@@ -108,6 +100,7 @@ h1 {
     position: relative;
     height: 1.875em;
 }
+
 .c3:before {
     content: "";
     display: block;
@@ -121,6 +114,7 @@ h1 {
     transform: scale(0.5);
     animation: shadow 1s linear infinite 0.4s;
 }
+
 .c3:after {
     content: "";
     display: block;
@@ -140,6 +134,7 @@ h1 {
     position: relative;
     height: 1.250em;
 }
+
 .c4:before {
     content: "";
     display: block;
@@ -153,6 +148,7 @@ h1 {
     transform: scale(0.5);
     animation: shadow 1s linear infinite 0.6s;
 }
+
 .c4:after {
     content: "";
     display: block;
@@ -166,6 +162,7 @@ h1 {
     margin: 0 0.179em;
     animation: jellijump 1s linear infinite 0.6s;
 }
+
 @keyframes jellijump {
     5% {
         top: -2.500em;
@@ -200,6 +197,7 @@ h1 {
         border-radius: 50%;
     }
 }
+
 @keyframes shadow {
     0% {
         transform: scale(0.5);

@@ -15,7 +15,7 @@ export default class PrintButton {
 
         document.getElementById("envio").addEventListener("click", event => {
             event.preventDefault()
-            subbmitAnswers(arrayCorrectAnswers, tryAndId)
+            this.subbmitAnswers(arrayCorrectAnswers, tryAndId)
         });
 
     }
@@ -44,8 +44,7 @@ export default class PrintButton {
         })
         finalScore = ((contador * 100) / arrayCorrectAnswers.length);
         this.showResults(contador, tryAndId, arrayCorrectAnswers, finalScore);
-        labelAnswerChecked.removeData();
-        arrayCorrectAnswers.removeData();
+
     }
 
     showResults(corrects, tryAndId, arrayCorrectAnswers, finalScore) {
@@ -69,7 +68,6 @@ export default class PrintButton {
         this.resetForm()
         this.addDefaultAction(arrayCorrectAnswers, tryAndId)
         container.innerHTML += results;
-        let ui = results
-        localStorage.setItem("puntajes", JSON.stringify(ui));
+
     }
 }

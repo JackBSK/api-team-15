@@ -29,9 +29,12 @@ function () {
   }, {
     key: "addDefaultAction",
     value: function addDefaultAction(arrayCorrectAnswers, tryAndId) {
+      var _this = this;
+
       document.getElementById("envio").addEventListener("click", function (event) {
         event.preventDefault();
-        subbmitAnswers(arrayCorrectAnswers, tryAndId);
+
+        _this.subbmitAnswers(arrayCorrectAnswers, tryAndId);
       });
     }
   }, {
@@ -62,8 +65,6 @@ function () {
       });
       finalScore = contador * 100 / arrayCorrectAnswers.length;
       this.showResults(contador, tryAndId, arrayCorrectAnswers, finalScore);
-      labelAnswerChecked.removeData();
-      arrayCorrectAnswers.removeData();
     }
   }, {
     key: "showResults",
@@ -78,8 +79,6 @@ function () {
       this.resetForm();
       this.addDefaultAction(arrayCorrectAnswers, tryAndId);
       container.innerHTML += results;
-      var ui = results;
-      localStorage.setItem("puntajes", JSON.stringify(ui));
     }
   }]);
 

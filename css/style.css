@@ -64,6 +64,11 @@ h1 {
     height: 90px;
 }
 
+.resul-container {
+    flex-direction: row;
+    justify-content: start;
+}
+
 @media(max-width: 780px) {
     .d-flex {
         flex-direction: column;
