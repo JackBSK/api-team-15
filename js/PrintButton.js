@@ -62,5 +62,7 @@ export default class PrintButton {
         this.resetForm()
         this.addDefaultAction(arrayCorrectAnswers, tryAndId)
         container.innerHTML += results;
+        let ui = results
+        localStorage.setItem("puntajes", JSON.stringify(ui));
     }
 }
