@@ -73,6 +73,7 @@ function getQuestions() {
   .then(function (data) {
     if (data.results.length != 0) {
       data.results.forEach(function (dataQuestion) {
+        console.log(dataQuestion);
         var question = new _Question["default"](dataQuestion);
         var printQuestions = new _PrintQuestion["default"]();
         printQuestions.printCard(question, arrayCorrectAnswers, tryAndId, questionsQuantity);

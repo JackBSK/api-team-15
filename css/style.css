@@ -54,3 +54,18 @@ body {
 .col-md {
     margin-right: 5px;
 }
+
+.col-100 {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Rammetto One', cursive;
+    height: 90px;
+}
+
+@media(max-width: 780px) {
+    .d-flex {
+        flex-direction: column;
+    }
+}

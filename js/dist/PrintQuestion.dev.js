@@ -53,7 +53,7 @@ function () {
 
       var numRandom = Math.floor(Math.random() * answers.length);
       answers.splice(numRandom, 0, q.correct_answer);
-      var card = "<div class=\"card m-2 \">\n                        <div class=\"card-body\">\n                          <h5 class=\"card-title\">".concat(q.category, "</h5>\n                          <h6 class=\"card-subtitle mb-2 text-muted\">").concat(q.question, "</h6>\n                          ").concat(this.returnAnswersHTML(answers, arrayCorrectAnswers, tryAndId), "\n                        </div>\n                      </div>\n                    ");
+      var card = "<div id=\"preguntas\" class=\"card m-2 \">\n                        <div class=\"card-body\">\n                          <h5 class=\"card-title\">".concat(q.category, "</h5>\n                          <h6 class=\"card-subtitle mb-2 text-muted\">").concat(q.question, "</h6>\n                          ").concat(this.returnAnswersHTML(answers, arrayCorrectAnswers, tryAndId), "\n                        </div>\n                      </div>\n                    ");
       return card;
     }
   }, {

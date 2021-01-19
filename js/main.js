@@ -6,6 +6,7 @@ import NotFoundQuestion from './NotFoundQuestion.js'
     selected.addEventListener('click', () => getQuestions())
 })
 
+
 function getCategory() {
     const url = 'https://opentdb.com/api_category.php';
 
@@ -54,10 +55,12 @@ function getQuestions() {
         .then(data => {
             if (data.results.length != 0) {
                 data.results.forEach(dataQuestion => {
+                    console.log(dataQuestion);
                     const question = new Question(dataQuestion)
                     const printQuestions = new PrintQuestion()
                     printQuestions.printCard(question, arrayCorrectAnswers, tryAndId, questionsQuantity)
                 })
+
             } else {
                 const noQuestions = new NotFoundQuestion(container)
                 noQuestions.printMessageNotFoundQuestion()

@@ -24,7 +24,7 @@ export default class PrintQuestion {
         const numRandom = Math.floor(Math.random() * answers.length)
         answers.splice(numRandom, 0, q.correct_answer);
 
-        const card = `<div class="card m-2 ">
+        const card = `<div id="preguntas" class="card m-2 ">
                         <div class="card-body">
                           <h5 class="card-title">${q.category}</h5>
                           <h6 class="card-subtitle mb-2 text-muted">${q.question}</h6>

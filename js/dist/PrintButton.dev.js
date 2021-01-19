@@ -29,12 +29,9 @@ function () {
   }, {
     key: "addDefaultAction",
     value: function addDefaultAction(arrayCorrectAnswers, tryAndId) {
-      var _this = this;
-
       document.getElementById("envio").addEventListener("click", function (event) {
         event.preventDefault();
-
-        _this.subbmitAnswers(arrayCorrectAnswers, tryAndId);
+        subbmitAnswers(arrayCorrectAnswers, tryAndId);
       });
     }
   }, {
@@ -65,6 +62,8 @@ function () {
       });
       finalScore = contador * 100 / arrayCorrectAnswers.length;
       this.showResults(contador, tryAndId, arrayCorrectAnswers, finalScore);
+      labelAnswerChecked.removeData();
+      arrayCorrectAnswers.removeData();
     }
   }, {
     key: "showResults",
@@ -73,7 +72,7 @@ function () {
       var container = document.getElementById('resultados');
       tryAndId[1]++;
       corrects == 1 ? textCorrects = "correcta" : textCorrects = "correctas";
-      var results = "<div class=\"card border-secondary mb-3\" style=\"max-width: 20rem;\">\n                          <div class=\"card-header\">Intento ".concat(tryAndId[1], "</div>\n                        <div class=\"card-body\">\n                          \n                          <p>Score Final: ").concat(finalScore, " / 100</p>\n                          <div class=\"progress mb-2\">\n                            <div class=\"progress-bar progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: ").concat(finalScore, "%;\">").concat(finalScore, "%</div>\n                            </div>\n                            <p>\"Tienes ").concat(corrects, "/").concat(arrayCorrectAnswers.length, " respuestas ").concat(textCorrects, " \"</p>                 \n                          </div>\n                        </div>\n                      ");
+      var results = "<div class=\"card border-secondary mb-1\" style=\"max-width: 20rem;\">\n                          <div class=\"card-header\">Intento ".concat(tryAndId[1], "</div>\n                        <div class=\"card-body\">\n                          <p>Score Final: ").concat(finalScore, " / 100</p>\n                          <div class=\"progress mb-2\">\n                            <div class=\"progress-bar progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: ").concat(finalScore, "%;\">").concat(finalScore, "%</div>\n                            </div>\n                            <p>\"Tienes ").concat(corrects, "/").concat(arrayCorrectAnswers.length, " respuestas ").concat(textCorrects, " \"</p>                 \n                          </div>\n                        </div>\n                      ");
       /*this.container.innerHTML += results*/
 
       this.resetForm();
