@@ -38,3 +38,19 @@ body {
  ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+
+/*Seccion de Resultados*/
+
+#resultados {
+    font-size: .7rem;
+}
+
+.card-resultados {
+    background-color: #2a9fd6;
+    color: #fff
+}
+
+.col-md {
+    margin-right: 5px;
+}
