@@ -61,7 +61,7 @@ function () {
     value: function returnAnswersHTML(answers, arrayCorrectAnswers, tryAndId) {
       var answerHTML = '';
       answers.forEach(function (answer) {
-        answerHTML += "<div class=\"form-check\">\n                        <input class=\"form-check-input\" type=\"radio\" name=\"question".concat(arrayCorrectAnswers.length, "\" id=\"answer").concat(1 + tryAndId[0] + answers.indexOf(answer), "\" value=").concat(1 + tryAndId[0] + answers.indexOf(answer), ">\n                        <label class=\"form-check-label\" for=\"answer").concat(1 + tryAndId[0] + answers.indexOf(answer), "\" >\n                        ").concat(answer, "\n                        </label>\n                    </div>");
+        answerHTML += "<div class=\"form-check\">\n                            <input class=\"form-check-input\" type=\"radio\" name=\"question".concat(arrayCorrectAnswers.length, "\" id=\"answer").concat(1 + tryAndId[0] + answers.indexOf(answer), "\" value=").concat(1 + tryAndId[0] + answers.indexOf(answer), ">\n                            <label class=\"form-check-label\" for=\"answer").concat(1 + tryAndId[0] + answers.indexOf(answer), "\" >").concat(answer, "</label>\n                          </div>");
       });
       tryAndId[0] += answers.length;
       return answerHTML;

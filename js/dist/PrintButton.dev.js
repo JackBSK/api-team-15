@@ -23,7 +23,7 @@ function () {
   _createClass(PrintButton, [{
     key: "addSubmitButton",
     value: function addSubmitButton(submitButton) {
-      var button = "<div class=\"text-center p-2\">\n                          <button id=\"envio\" type=\"submit\" data-toggle=\"model\" class=\"btn btn-warning btn-lg m-2 \"/>submit</button>\n                        </div>";
+      var button = "<div id=\"submit-button\" class=\"text-center p-2\">\n                          <button id=\"envio\" type=\"submit\" data-toggle=\"model\" class=\"btn btn-warning btn-lg m-2 \"/>submit</button>\n                        </div>";
       submitButton.container.innerHTML += button;
     }
   }, {
@@ -73,12 +73,14 @@ function () {
       var container = document.getElementById('resultados');
       tryAndId[1]++;
       corrects == 1 ? textCorrects = "correcta" : textCorrects = "correctas";
-      var results = "<div class=\"card border-secondary mb-3\" style=\"max-width: 20rem;\">\n                          <div class=\"card-header\">Intento ".concat(tryAndId[1], "</div>\n                        <div class=\"card-body\">\n                          \n                          <p>Score Final: ").concat(finalScore, " / 100</p>\n                          <div class=\"progress mb-2\">\n                            <div class=\"progress-bar progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: ").concat(finalScore, "%;\"></div>\n                            </div>\n                            <p>\"Tienes ").concat(corrects, "/").concat(arrayCorrectAnswers.length, " respuestas ").concat(textCorrects, " \"</p>                 \n                          </div>\n                        </div>\n                      ");
+      var results = "<div class=\"card border-secondary mb-3\" style=\"max-width: 20rem;\">\n                          <div class=\"card-header\">Intento ".concat(tryAndId[1], "</div>\n                        <div class=\"card-body\">\n                          \n                          <p>Score Final: ").concat(finalScore, " / 100</p>\n                          <div class=\"progress mb-2\">\n                            <div class=\"progress-bar progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"75\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: ").concat(finalScore, "%;\">").concat(finalScore, "%</div>\n                            </div>\n                            <p>\"Tienes ").concat(corrects, "/").concat(arrayCorrectAnswers.length, " respuestas ").concat(textCorrects, " \"</p>                 \n                          </div>\n                        </div>\n                      ");
       /*this.container.innerHTML += results*/
 
       this.resetForm();
       this.addDefaultAction(arrayCorrectAnswers, tryAndId);
       container.innerHTML += results;
+      var ui = results;
+      localStorage.setItem("puntajes", JSON.stringify(ui));
     }
   }]);
 

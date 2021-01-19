@@ -5,11 +5,12 @@ export default class PrintButton {
     }
 
     addSubmitButton(submitButton) {
-        const button = `<div class="text-center p-2">
+        const button = `<div id="submit-button" class="text-center p-2">
                           <button id="envio" type="submit" data-toggle="model" class="btn btn-warning btn-lg m-2 "/>submit</button>
                         </div>`
 
         submitButton.container.innerHTML += button
+
     }
 
     addDefaultAction(arrayCorrectAnswers, tryAndId) {
@@ -56,7 +57,7 @@ export default class PrintButton {
                           
                           <p>Score Final: ${finalScore} / 100</p>
                           <div class="progress mb-2">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${finalScore}%;"></div>
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${finalScore}%;">${finalScore}%</div>
                             </div>
                             <p>"Tienes ${corrects}/${arrayCorrectAnswers.length} respuestas ${textCorrects} "</p>                 
                           </div>
@@ -66,5 +67,7 @@ export default class PrintButton {
         this.resetForm()
         this.addDefaultAction(arrayCorrectAnswers, tryAndId)
         container.innerHTML += results;
+        let ui = results
+        localStorage.setItem("puntajes", JSON.stringify(ui));
     }
 }
