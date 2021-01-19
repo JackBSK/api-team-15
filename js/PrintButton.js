@@ -5,11 +5,12 @@ export default class PrintButton {
     }
 
     addSubmitButton(submitButton) {
-        const button = `<div class="text-center p-2">
+        const button = `<div id="submit-button" class="text-center p-2">
                           <button id="envio" type="submit" data-toggle="model" class="btn btn-warning btn-lg m-2 "/>submit</button>
                         </div>`
 
         submitButton.container.innerHTML += button
+
     }
 
     addDefaultAction(arrayCorrectAnswers, tryAndId) {
@@ -49,14 +50,18 @@ export default class PrintButton {
         const container = document.getElementById('resultados')
         tryAndId[1]++;
         corrects == 1 ? textCorrects = "correcta" : textCorrects = "correctas"
-        const results = `
-                        <p>Intento ${tryAndId[1]} </p>
-                        <p>Score Final: ${finalScore} / 100.</p>
-                        <div class="progress m-2">
-                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${finalScore}%;"></div>
+
+        const results = `<div class="card border-secondary mb-3" style="max-width: 20rem;">
+                          <div class="card-header">Intento ${tryAndId[1]}</div>
+                        <div class="card-body">
+                          
+                          <p>Score Final: ${finalScore} / 100</p>
+                          <div class="progress mb-2">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${finalScore}%;">${finalScore}%</div>
+                            </div>
+                            <p>"Tienes ${corrects}/${arrayCorrectAnswers.length} respuestas ${textCorrects} "</p>                 
+                          </div>
                         </div>
-                        <p>"Tienes ${corrects}/${arrayCorrectAnswers.length} respuestas ${textCorrects} "</p>                
-                      
                       `
             /*this.container.innerHTML += results*/
         this.resetForm()

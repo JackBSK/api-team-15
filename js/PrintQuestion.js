@@ -40,11 +40,9 @@ export default class PrintQuestion {
         let answerHTML = ''
         answers.forEach(answer => {
             answerHTML += `<div class="form-check">
-                        <input class="form-check-input" type="radio" name="question${arrayCorrectAnswers.length}" id="answer${1+tryAndId[0]+answers.indexOf(answer)}" value=${1+tryAndId[0]+answers.indexOf(answer)}>
-                        <label class="form-check-label" for="answer${1+tryAndId[0]+answers.indexOf(answer)}" >
-                        ${answer}
-                        </label>
-                    </div>`
+                            <input class="form-check-input" type="radio" name="question${arrayCorrectAnswers.length}" id="answer${1+tryAndId[0]+answers.indexOf(answer)}" value=${1+tryAndId[0]+answers.indexOf(answer)}>
+                            <label class="form-check-label" for="answer${1+tryAndId[0]+answers.indexOf(answer)}" >${answer}</label>
+                          </div>`
         })
         tryAndId[0] += answers.length
         return answerHTML;
